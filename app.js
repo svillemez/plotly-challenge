@@ -1,19 +1,6 @@
-// Submit Button handler
-function handleSubmit() {
-    // @TODO: YOUR CODE HERE
-    // Prevent the page from refreshing
-    d3.event.preventDefault();
+// Load the data
+buildPlot(samples);
 
-    // Select the input value from the form
-    let idchoice = d3.select("#idInput").node().value;
-    console.log('id', idchoice);
-
-    // clear the input value
-    d3.select('#idInput').node().value = "";
-
-    // Build the plot with the new stock
-    buildPlot(samples);
-}
 
 
 function buildPlot(samples) {
