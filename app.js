@@ -10,7 +10,7 @@ function getPlot(id) {
         // filter sample values by id 
         let samples = data.samples.filter(s => s.id.toString() === id)[0];
 
-        console.log(samples);
+        //console.log(samples);
 
         // Getting the top 10 
         let samplevalues = samples.sample_values.slice(0, 10).reverse();
@@ -21,7 +21,7 @@ function getPlot(id) {
         // get the otu id's to the desired form for the plot
         let OTU_id = OTU_top.map(d => "OTU " + d)
 
-        console.log(`OTU IDS: ${OTU_id}`)
+        //console.log(`OTU IDS: ${OTU_id}`)
 
 
         // get the top 10 labels for the plot
