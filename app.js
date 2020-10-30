@@ -42,7 +42,7 @@ function getPlot(id) {
         };
 
         // create data variable
-        let data = [trace];
+        let data0 = [trace];
 
         // create layout variable to set plots layout
         let layout = {
@@ -59,7 +59,7 @@ function getPlot(id) {
         };
 
         // create the bar plot
-        Plotly.newPlot("bar", data, layout);
+        Plotly.newPlot("bar", data0, layout);
 
         console.log(`ID: ${samples.otu_ids}`)
 
@@ -95,7 +95,7 @@ function getPlot(id) {
 // create the function to get the necessary data
 function getInfo(id) {
     // read the json file to get data
-    d3.json("Data/samples.json").then((data) => {
+    d3.json("samples.json").then((data) => {
 
         // get the metadata info for the demographic panel
         let metadata = data.metadata;
@@ -130,7 +130,7 @@ function init() {
     let dropdown = d3.select("#selDataset");
 
     // read the data 
-    d3.json("Data/samples.json").then((data) => {
+    d3.json("samples.json").then((data) => {
         console.log(data)
 
         // get the id data to the dropdwown menu
